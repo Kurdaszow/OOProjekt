@@ -1,0 +1,14 @@
+C:\Users\tomek\Documents\ooproject\OOProject\obj\Debug\net10.0\OOProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tomek\Documents\ooproject\OOProject\obj\Debug\net10.0\OOProject.AssemblyInfoInputs.cache
+C:\Users\tomek\Documents\ooproject\OOProject\obj\Debug\net10.0\OOProject.AssemblyInfo.cs
+C:\Users\tomek\Documents\ooproject\OOProject\obj\Debug\net10.0\OOProject.csproj.CoreCompileInputs.cache
+C:\Users\tomek\Documents\ooproject\OOProject\bin\Debug\net10.0\OOProject.exe
+C:\Users\tomek\Documents\ooproject\OOProject\bin\Debug\net10.0\OOProject.deps.json
+C:\Users\tomek\Documents\ooproject\OOProject\bin\Debug\net10.0\OOProject.runtimeconfig.json
+C:\Users\tomek\Documents\ooproject\OOProject\bin\Debug\net10.0\OOProject.dll
+C:\Users\tomek\Documents\ooproject\OOProject\bin\Debug\net10.0\OOProject.pdb
+C:\Users\tomek\Documents\ooproject\OOProject\obj\Debug\net10.0\OOProject.dll
+C:\Users\tomek\Documents\ooproject\OOProject\obj\Debug\net10.0\refint\OOProject.dll
+C:\Users\tomek\Documents\ooproject\OOProject\obj\Debug\net10.0\OOProject.pdb
+C:\Users\tomek\Documents\ooproject\OOProject\obj\Debug\net10.0\OOProject.genruntimeconfig.cache
+C:\Users\tomek\Documents\ooproject\OOProject\obj\Debug\net10.0\ref\OOProject.dll
