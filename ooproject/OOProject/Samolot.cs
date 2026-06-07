@@ -9,10 +9,8 @@ class Samolot : Przejazd
     {
             if (terminOdp >= start)
             {
-                throw new ArgumentException(
-                    "Termin odprawy musi być wcześniejszy niż data wylotu.");
+                throw new ArgumentException("Termin odprawy musi być wcześniejszy niż data wylotu.");
             }
-
         this.notatka = notatka;
         Random rnd = new Random();
         this.kodBiletu = rnd.Next(0, 1000000).ToString("000000");
@@ -31,24 +29,22 @@ class Samolot : Przejazd
     {
         return $"Przejazd: Samolot  {lotniskoWylotu} {dataPoczatek}  ->  {lotniskoPrzylotu} {dataKoniec}";
     }
-
-//TU Zrobic te metody
     public override string WyswietlBilet()
     {
-        return
-            $"=== BILET LOTNICZY ===\n" +
-            $"Nazwa: {nazwa}\n" +
-            $"Kod biletu: {kodBiletu}\n" +
-            $"Miejsce: {miejsce}\n" +
-            $"Lotnisko wylotu: {lotniskoWylotu}\n" +
-            $"Lotnisko przylotu: {lotniskoPrzylotu}\n" +
-            $"Bramka: {Bramka}\n" +
-            $"Odprawa: {terminOdprawy}\n" +
-            $"Start: {dataPoczatek}\n" +
-            $"Koniec: {dataKoniec}\n" +
-            $"Notatka: {notatka}";
+        return$"=== BILET LOTNICZY ===\n" +$"Nazwa: {nazwa}\n" +$"Kod biletu: {kodBiletu}\n" +$"Miejsce: {miejsce}\n" +$"Lotnisko wylotu: {lotniskoWylotu}\n" +$"Lotnisko przylotu: {lotniskoPrzylotu}\n" +$"Bramka: {Bramka}\n" +$"Odprawa: {terminOdprawy}\n" +$"Start: {dataPoczatek}\n" +$"Koniec: {dataKoniec}\n" +$"Notatka: {notatka}"+$"Potwierdzone: {potwierdzenie}";
     }
-    public override TimeSpan SprawdzOpoznienia(){return new TimeSpan(0,0,0);}
+    public override TimeSpan SprawdzOpoznienia()
+    {
+        Random rnd = new Random();
+        int roll = rnd.Next(0, 100);
+
+        int opoznienieMinuty;
+
+        if (roll < 70) opoznienieMinuty = rnd.Next(0, 10);
+        else if (roll < 95) opoznienieMinuty = rnd.Next(10, 30); 
+        else opoznienieMinuty = rnd.Next(30, 60); 
+        return TimeSpan.FromMinutes(opoznienieMinuty);
+    }
     public override void Potwierdz()
     {
         if (DateTime.Now >= terminOdprawy)
@@ -58,9 +54,7 @@ class Samolot : Przejazd
         }
         else
         {
-            Console.WriteLine(
-                $"Nie można jeszcze potwierdzić lotu. " +
-                $"Odprawa rozpoczyna się: {terminOdprawy}");
+            Console.WriteLine($"Nie można jeszcze potwierdzić lotu. " +$"Odprawa rozpoczyna się: {terminOdprawy}");
         }
     }
     public override bool CzyPotwierdzone(){return potwierdzenie;}

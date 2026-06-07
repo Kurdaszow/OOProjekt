@@ -9,10 +9,8 @@
         {
             if (end <= start)
             {
-                throw new ArgumentException(
-                    "Data zakończenia musi być późniejsza od daty rozpoczęcia.");
+                throw new ArgumentException("Data zakończenia musi być późniejsza od daty rozpoczęcia.");
             }
-
             this.dataPoczatek = start;
             this.dataKoniec = end;
             this.czasTrwania = end - start;
@@ -26,10 +24,8 @@
         {
             if (koniec <= start)
             {
-                throw new ArgumentException(
-                    "Data zakończenia musi być późniejsza od daty rozpoczęcia.");
+                throw new ArgumentException("Data zakończenia musi być późniejsza od daty rozpoczęcia.");
             }
-
             dataPoczatek = start;
             dataKoniec = koniec;
             czasTrwania = koniec - start;
@@ -39,10 +35,8 @@
         {
             if (nowyCzasTrwania <= TimeSpan.Zero)
             {
-                throw new ArgumentException(
-                    "Czas trwania musi być większy od zera.");
+                throw new ArgumentException("Czas trwania musi być większy od zera.");
             }
-
             czasTrwania = nowyCzasTrwania;
             dataKoniec = dataPoczatek + nowyCzasTrwania;
         }

@@ -12,14 +12,17 @@ public Aktywnosc(string lokalizacja, string opis, DateTime start, DateTime konie
     Random rnd = new Random();
     this.kodBiletu = rnd.Next(0, 1000000).ToString("000000");
 }
-
     public override string ToString()
     {
         return $"Aktywność: {nazwa}  {dataPoczatek}  ->  {dataKoniec}";
     }
     public string GetLokalizacja() { return lokalizacja; }
     public string GetOpis() { return opis; }
-    public override string WyswietlBilet(){return kodBiletu;}
+    public override string WyswietlBilet()
+    {
+        return$"=== AKTYWNOSC ===\n" +$"Nazwa: {nazwa}\n" +$"Lokalizacja: {lokalizacja}\n" +$"Typ: {opis}\n" +$"Notatka: {kodBiletu}\n" +$"Od: {dataPoczatek}\n" +$"Do: {dataKoniec}"+$"Potwierdzone: {potwierdzenie}";
+        
+    }
     public void ZmienOpis(string opisZmiana)
     {
         Console.WriteLine($"{opis}");
@@ -30,8 +33,6 @@ public Aktywnosc(string lokalizacja, string opis, DateTime start, DateTime konie
     {
         Console.WriteLine($"{lokalizacja} {opis} {kodBiletu} {potwierdzenie}");
     }
-
-
     public override void Potwierdz(){potwierdzenie = true;}
     public override bool CzyPotwierdzone(){return potwierdzenie;}
 }
