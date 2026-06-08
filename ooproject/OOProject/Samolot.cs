@@ -10,7 +10,10 @@ class Samolot : Przejazd
             if (terminOdp >= start)
             {
                 throw new ArgumentException("Termin odprawy musi być wcześniejszy niż data wylotu.");
-            }
+            } else
+        {
+            this.terminOdprawy = terminOdp;
+        }
         this.notatka = notatka;
         Random rnd = new Random();
         this.kodBiletu = rnd.Next(0, 1000000).ToString("000000");
@@ -31,7 +34,7 @@ class Samolot : Przejazd
     }
     public override string WyswietlBilet()
     {
-        return$"=== BILET LOTNICZY ===\n" +$"Nazwa: {nazwa}\n" +$"Kod biletu: {kodBiletu}\n" +$"Miejsce: {miejsce}\n" +$"Lotnisko wylotu: {lotniskoWylotu}\n" +$"Lotnisko przylotu: {lotniskoPrzylotu}\n" +$"Bramka: {Bramka}\n" +$"Odprawa: {terminOdprawy}\n" +$"Start: {dataPoczatek}\n" +$"Koniec: {dataKoniec}\n" +$"Notatka: {notatka}"+$"Potwierdzone: {potwierdzenie}";
+        return$"=== BILET LOTNICZY ===\n" +$"Nazwa: {nazwa}\n" +$"Kod biletu: {kodBiletu}\n" +$"Miejsce: {miejsce}\n" +$"Lotnisko wylotu: {lotniskoWylotu}\n" +$"Lotnisko przylotu: {lotniskoPrzylotu}\n" +$"Bramka: {Bramka}\n" +$"Odprawa: {terminOdprawy}\n" +$"Start: {dataPoczatek}\n" +$"Koniec: {dataKoniec}\n" +$"Notatka: {notatka}\n"+$"Potwierdzone: {potwierdzenie}";
     }
     public override TimeSpan SprawdzOpoznienia()
     {

@@ -17,7 +17,7 @@ class Nocleg: Wydarzenie{
         public string GetNotatka() { return notatka; }
         public override string WyswietlBilet()
         {
-            return$"=== NOCLEG ===\n" +$"Nazwa: {nazwa}\n" +$"Lokalizacja: {lokalizacja}\n" +$"Typ: {typ}\n" +$"Notatka: {notatka}\n" +$"Od: {dataPoczatek}\n" +$"Do: {dataKoniec}"+$"Potwierdzone: {potwierdzenie}";
+            return$"=== NOCLEG ===\n" +$"Nazwa: {nazwa}\n" +$"Lokalizacja: {lokalizacja}\n" +$"Typ: {typ}\n" +$"Notatka: {notatka}\n" +$"Od: {dataPoczatek}\n" +$"Do: {dataKoniec}\n"+$"Potwierdzone: {potwierdzenie}";
         }
         public override string ToString()
         {

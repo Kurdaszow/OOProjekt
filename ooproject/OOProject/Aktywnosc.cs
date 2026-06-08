@@ -20,7 +20,7 @@ public Aktywnosc(string lokalizacja, string opis, DateTime start, DateTime konie
     public string GetOpis() { return opis; }
     public override string WyswietlBilet()
     {
-        return$"=== AKTYWNOSC ===\n" +$"Nazwa: {nazwa}\n" +$"Lokalizacja: {lokalizacja}\n" +$"Typ: {opis}\n" +$"Notatka: {kodBiletu}\n" +$"Od: {dataPoczatek}\n" +$"Do: {dataKoniec}"+$"Potwierdzone: {potwierdzenie}";
+        return$"=== AKTYWNOSC ===\n" +$"Nazwa: {nazwa}\n" +$"Lokalizacja: {lokalizacja}\n" +$"Typ: {opis}\n" +$"Notatka: {kodBiletu}\n" +$"Od: {dataPoczatek}\n" +$"Do: {dataKoniec}\n"+$"Potwierdzone: {potwierdzenie}";
         
     }
     public void ZmienOpis(string opisZmiana)

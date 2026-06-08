@@ -31,7 +31,7 @@ class Autobus : Przejazd
     }
     public override string WyswietlBilet()
     {
-        return $"=== BILET AUTOBUSOWY ===\n" +$"Nazwa: {nazwa}\n" +$"Kod biletu: {kodBiletu}\n" +$"Miejsce: {miejsce}\n" +$"Przystanek startowy: {PrzystanekStartowy}\n" +$"Przystanek końcowy: {PrzystanekKoncowy}\n" +$"Liczba przystanków: {liczbaPrzystankow}\n" +$"Start: {dataPoczatek}\n" +$"Koniec: {dataKoniec}\n" +$"Notatka: {notatka}"+$"Potwierdzone: {potwierdzenie}";
+        return $"=== BILET AUTOBUSOWY ===\n" +$"Nazwa: {nazwa}\n" +$"Kod biletu: {kodBiletu}\n" +$"Miejsce: {miejsce}\n" +$"Przystanek startowy: {PrzystanekStartowy}\n" +$"Przystanek końcowy: {PrzystanekKoncowy}\n" +$"Liczba przystanków: {liczbaPrzystankow}\n" +$"Start: {dataPoczatek}\n" +$"Koniec: {dataKoniec}\n" +$"Notatka: {notatka}\n"+$"Potwierdzone: {potwierdzenie}";
     }
     public override TimeSpan SprawdzOpoznienia()
     {

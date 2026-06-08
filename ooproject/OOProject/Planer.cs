@@ -195,7 +195,7 @@ class Planer
 
             listaWydarzen.RemoveAt(index);
             AktualizujKoniec();
-            Console.WriteLine("Usunięto wydarzenie.");
+
         }
 
         public void UsunNocleg(int index)
@@ -207,7 +207,7 @@ class Planer
             }
 
             listaNoclegi.RemoveAt(index);
-            Console.WriteLine("Usunięto nocleg.");
+
         }
         public void PrzestawNocleg(int index)
         {

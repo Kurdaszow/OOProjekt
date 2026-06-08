@@ -1,7 +1,7 @@
 AKTYWNOSC;Bialystok;opis;6/7/2026 2:00:00 PM;6/7/2026 4:00:00 PM;Jakas_Aktywnosc
 AUTOBUS;6/7/2026 4:20:00 PM;6/7/2026 6:30:00 PM;Jakis_Autobus;cool;Ulica_Jakas;Bialystok;Warszawa;7
 AKTYWNOSC;Warszawa;inna;6/7/2026 7:00:00 PM;6/7/2026 9:30:00 PM;Inna_Aktywnosc
-AKTYWNOSC;Warszawa;brak;6/8/2026 12:00:00 PM;6/8/2026 2:45:00 PM;Ostatnia_Aktywnosc
 AUTOBUS;6/8/2026 3:15:00 PM;6/8/2026 5:20:00 PM;Jakis_Przejazd;ool;Jaks_Ulica;Warszawa;Bialystok;2
+AKTYWNOSC;Warszawa;brak;6/8/2026 5:20:00 PM;6/8/2026 8:05:00 PM;Ostatnia_Aktywnosc
 NOCLEG;6/7/2026 10:00:00 PM;6/8/2026 11:00:00 AM;Jakis_Nocleg;Warszawa;hotel;brak
 NOCLEG;6/8/2026 10:00:00 PM;6/9/2026 11:00:00 AM;Jakis_inny_Nocleg;bialystok;hotel;brak

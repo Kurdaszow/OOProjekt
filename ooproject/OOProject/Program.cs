@@ -3,6 +3,13 @@
     using System.Linq;
     class Program
     {
+        static void CzekajNaEnter(string komunikat = "Wciśnij enter aby kontynuować")
+        {
+            Console.WriteLine();
+            Console.WriteLine(komunikat);
+            Console.ReadLine();
+            Console.Clear();
+        }
         static string WczytajWymaganaWartosc(string komunikat)
         {
             while (true)
@@ -36,15 +43,19 @@
                             Console.Write("Data początku planu (yyyy-MM-dd HH:mm): ");
                             DateTime dataStart = DateTime.Parse(Console.ReadLine());
                             planer = new Planer(dataStart);
+                            Console.WriteLine("Utworzono planer.");
+                            CzekajNaEnter();
                             break;
                         case "2":
                             Console.Write("Ścieżka do pliku: ");
                             string sciezka = Console.ReadLine();
                             planer = new Planer(sciezka);
                             Console.WriteLine("Wczytano planer.");
+                            CzekajNaEnter();
                             break;
                         default:
                             Console.WriteLine("Niepoprawna opcja.");
+                            CzekajNaEnter();
                             continue;
                     }
                 }
@@ -83,6 +94,8 @@
                                 Console.Write("Data końca(yyyy-MM-dd HH:mm): ");
                                 DateTime koniec = DateTime.Parse(Console.ReadLine());
                                 planer.WstawWydarzenie(new Aktywnosc(lokalizacja,opis,start,koniec,nazwa));
+                                Console.WriteLine("Dodano aktywność.");
+                                CzekajNaEnter();
                                 break;
                             }
                             case "2":
@@ -110,6 +123,7 @@
                                         int liczbaPrzystankow = int.Parse(Console.ReadLine());
                                         planer.WstawWydarzenie(new Autobus(start,koniec,nazwa,notatka,miejsce,startPrz,koniecPrz,liczbaPrzystankow));
                                         Console.WriteLine("Dodano przejazd autobusem.");
+                                        CzekajNaEnter();
                                         break;
                                     }
                                     case "2":
@@ -121,6 +135,7 @@
                                         DateTime odprawa = DateTime.Parse(Console.ReadLine());
                                         planer.WstawWydarzenie(new Samolot(start,koniec,nazwa,notatka,miejsce,lotniskoWylotu,lotniskoPrzylotu,bramka,odprawa));
                                         Console.WriteLine("Dodano przelot.");
+                                        CzekajNaEnter();
                                         break;
                                     }
                                     default:
@@ -144,17 +159,20 @@
                                 Console.Write("Data końca(yyyy-MM-dd HH:mm): ");
                                 DateTime koniec = DateTime.Parse(Console.ReadLine());
                                 planer.WstawNocleg(new Nocleg(start,koniec,nazwa,lokalizacja,typ,notatka));
+                                Console.WriteLine("Dodano nocleg.");
+                                CzekajNaEnter();
                                 break;
                             }
                            case "4":
                             {
                                 Console.WriteLine(planer.WyswietlHarmonogram());
+                                CzekajNaEnter("Wciśnij enter aby wybrać wydarzenie");
                                 Console.WriteLine();
                                 Console.Write("Podaj indeks wydarzenia (-1 aby wrócić): ");
                                 int indeks = int.Parse(Console.ReadLine());
                                 if(indeks != -1)
                                 {
-                                    Wydarzenie wydarzenie =planer.PobierzWydarzenie(indeks);
+                                    Wydarzenie wydarzenie = planer.PobierzWydarzenie(indeks);
                                     if(wydarzenie != null)
                                     {
                                         while(true)
@@ -217,6 +235,8 @@
                                                     case "5":
                                                     {
                                                         planer.UsunWydarzenie(indeks);
+                                                        Console.WriteLine("Usunięto wydarzenie.");
+                                                        CzekajNaEnter();
                                                         goto KoniecMenuWydarzenia;
                                                     }
 
@@ -321,6 +341,8 @@
                                                 case "5":
                                                 {
                                                     planer.UsunNocleg(indeks);
+                                                   Console.WriteLine("Usunięto Nocleg.");
+                                                    CzekajNaEnter();
                                                     goto KoniecMenuNoclegu;
                                                 }
                                                 case "0":
@@ -342,6 +364,7 @@
                             case "0":
                             {
                                 Console.WriteLine("Planer został zamknięty.");
+                                CzekajNaEnter();
                                 planer = null;
                                 goto ZamknijPlaner;
                             }
@@ -358,9 +381,7 @@
                     {
                         Console.WriteLine($"Błąd: {ex.Message}");
                     }
-                    Console.WriteLine("Wciśnij enter aby kontynuować");
-                    Console.ReadLine();
-                    Console.Clear();
+
                 }
                 ZamknijPlaner:;
             }
